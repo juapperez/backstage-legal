@@ -43,6 +43,24 @@
   th { background: var(--ink2); font-weight: 650; }
   td:first-child { white-space: normal; }
   strong { font-weight: 650; }
+  /* En móvil, una tabla de dos columnas obliga a arrastrar para leer la
+     columna que importa. Cada fila pasa a ser una tarjeta con la etiqueta
+     arriba y la explicación debajo: se lee de corrido, sin scroll lateral. */
+  @media (max-width: 560px) {
+    .table-wrap { overflow-x: visible; }
+    table { min-width: 0; display: block; }
+    thead { display: none; }
+    tbody { display: block; }
+    tr {
+      display: block; border: 1px solid var(--border);
+      border-radius: 10px; margin-bottom: 10px; overflow: hidden;
+    }
+    td { display: block; border: 0; }
+    td:first-child {
+      background: var(--ink2); font-weight: 650;
+      border-bottom: 1px solid var(--border);
+    }
+  }
   footer {
     max-width: 720px; margin: 64px auto 0; padding-top: 24px;
     border-top: 1px solid var(--border); color: var(--faint); font-size: 14px;
