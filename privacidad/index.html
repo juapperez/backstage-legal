@@ -32,6 +32,14 @@
     overflow-wrap: anywhere;
   }
   hr { border: 0; border-top: 1px solid var(--border); margin: 36px 0; }
+  .table-wrap { overflow-x: auto; margin: 0 0 20px; -webkit-overflow-scrolling: touch; }
+  table { border-collapse: collapse; width: 100%; min-width: 460px; font-size: 15px; }
+  th, td {
+    border: 1px solid var(--border); padding: 10px 12px;
+    text-align: left; vertical-align: top;
+  }
+  th { background: var(--ink2); font-weight: 650; }
+  td:first-child { white-space: normal; }
   strong { font-weight: 650; }
   footer {
     max-width: 720px; margin: 64px auto 0; padding-top: 24px;
@@ -43,17 +51,11 @@
 <main>
 <h1>Política de privacidad de Backstage</h1>
 <p><strong>Última actualización: 3 de agosto de 2026</strong></p>
-<p><strong>Aplicación:</strong> Backstage</p>
-<p><strong>Identificador:</strong> <code>com.backstage.app</code></p>
-<p><strong>Responsable:</strong> <code>Juan Pablo Pérez Vélez</code></p>
-<p><strong>Contacto:</strong> <code>pdevelop@pm.me</code></p>
+<p><strong>Aplicación:</strong> Backstage <strong>Identificador:</strong> <code>com.backstage.app</code> <strong>Responsable:</strong> <code>Juan Pablo Pérez Vélez</code> <strong>Contacto:</strong> <code>pdevelop@pm.me</code></p>
 <hr>
 <h2>1. Resumen en una frase</h2>
-<p>Backstage no recoge, no almacena en servidores, no transmite y no comparte ningún dato</p>
-<p>personal. No hay cuentas, no hay servidores, no hay analítica y no hay anuncios. Todo</p>
-<p>lo que la app guarda son tus datos de progreso, y viven únicamente en tu dispositivo.</p>
-<p>El resto de este documento explica esa frase con el detalle que exigen las tiendas y la</p>
-<p>normativa, pero no añade excepciones escondidas: no hay ninguna.</p>
+<p>Backstage no recoge, no almacena en servidores, no transmite y no comparte ningún dato personal. No hay cuentas, no hay servidores, no hay analítica y no hay anuncios. Todo lo que la app guarda son tus datos de progreso, y viven únicamente en tu dispositivo.</p>
+<p>El resto de este documento explica esa frase con el detalle que exigen las tiendas y la normativa, pero no añade excepciones escondidas: no hay ninguna.</p>
 <h2>2. Qué datos NO se recogen</h2>
 <p>Para que quede sin ambigüedad, una lista de lo que esta app <strong>no</strong> hace:</p>
 <ul>
@@ -71,8 +73,7 @@
 <li>No hace perfilado, ni segmentación, ni decisiones automatizadas sobre ti.</li>
 <li>No vende ni cede datos a nadie, porque no tiene datos que vender ni ceder.</li>
 </ul>
-<p>La app <strong>no solicita ningún permiso del sistema operativo</strong>. Si tu teléfono te llega a</p>
-<p>pedir un permiso en nombre de Backstage, algo va mal: escríbenos.</p>
+<p>La app <strong>no solicita ningún permiso del sistema operativo</strong>. Si tu teléfono te llega a pedir un permiso en nombre de Backstage, algo va mal: escríbenos.</p>
 <h2>3. Qué guarda la app, y dónde</h2>
 <p>Backstage guarda tu progreso para que puedas continuar donde lo dejaste. Concretamente:</p>
 <ul>
@@ -86,124 +87,65 @@
 <li>La lista de ejercicios que has fallado y siguen pendientes de repaso.</li>
 <li>Los logros que has desbloqueado.</li>
 </ul>
-<p>Estos datos se guardan mediante el almacenamiento local de la aplicación</p>
-<p>(<code>AsyncStorage</code>), bajo la clave <code>backstage-progress-v1</code>, dentro del espacio privado que</p>
-<p>el sistema operativo reserva a cada app.</p>
-<p><strong>Nunca salen de tu dispositivo.</strong> No se sincronizan, no se respaldan en un servidor</p>
-<p>nuestro, no se asocian a ninguna identidad y nadie más que tú puede verlos, empezando</p>
-<p>por quien ha hecho la app.</p>
-<p>Legalmente, esto significa que quien trata esos datos eres tú, en tu propio</p>
-<p>dispositivo. No hay un responsable del tratamiento al otro lado porque no hay otro</p>
-<p>lado.</p>
+<p>Estos datos se guardan mediante el almacenamiento local de la aplicación (<code>AsyncStorage</code>), bajo la clave <code>backstage-progress-v1</code>, dentro del espacio privado que el sistema operativo reserva a cada app.</p>
+<p><strong>Nunca salen de tu dispositivo.</strong> No se sincronizan, no se respaldan en un servidor nuestro, no se asocian a ninguna identidad y nadie más que tú puede verlos, empezando por quien ha hecho la app.</p>
+<p>Legalmente, esto significa que quien trata esos datos eres tú, en tu propio dispositivo. No hay un responsable del tratamiento al otro lado porque no hay otro lado.</p>
 <h2>4. La app funciona sin conexión y no hace peticiones de red</h2>
-<p>Backstage no necesita internet para nada de su funcionamiento. Puedes usarla completa</p>
-<p>en modo avión: las 37 lecciones y los 259 ejercicios vienen dentro de la aplicación.</p>
-<p>Hay una sola excepción, y es explícita: si pulsas el enlace a esta política de</p>
-<p>privacidad desde la pantalla de avisos legales de la app, se abre el navegador de tu</p>
-<p>teléfono y la petición la hace el navegador, no la app. En ese momento el servidor donde</p>
-<p>esté alojada esta página verá lo que ve cualquier servidor web: tu dirección IP y los</p>
-<p>datos de tu navegador, según la configuración del proveedor de alojamiento. Es un enlace</p>
-<p>que tú decides pulsar, y no ocurre nada si no lo pulsas.</p>
+<p>Backstage no necesita internet para nada de su funcionamiento. Puedes usarla completa en modo avión: las 37 lecciones y los 259 ejercicios vienen dentro de la aplicación.</p>
+<p>Hay una sola excepción, y es explícita: si pulsas el enlace a esta política de privacidad desde la pantalla de avisos legales de la app, se abre el navegador de tu teléfono y la petición la hace el navegador, no la app. En ese momento el servidor donde esté alojada esta página verá lo que ve cualquier servidor web: tu dirección IP y los datos de tu navegador, según la configuración del proveedor de alojamiento. Es un enlace que tú decides pulsar, y no ocurre nada si no lo pulsas.</p>
 <h2>5. Terceros</h2>
 <p>No hay.</p>
-<p>No hay proveedores de servicios, ni encargados del tratamiento, ni SDK de terceros que</p>
-<p>recojan datos, ni socios publicitarios, ni transferencias internacionales de datos.</p>
-<p>Ninguna de esas secciones habituales aplica a esta app porque no hay ningún destinatario</p>
-<p>de datos.</p>
-<p>La app está construida con software libre y de código abierto (React Native, Expo y</p>
-<p>otras librerías). Son bibliotecas que se compilan dentro de la aplicación: no son</p>
-<p>servicios, no reciben información y no hay ninguna comunicación con sus autores.</p>
+<p>No hay proveedores de servicios, ni encargados del tratamiento, ni SDK de terceros que recojan datos, ni socios publicitarios, ni transferencias internacionales de datos. Ninguna de esas secciones habituales aplica a esta app porque no hay ningún destinatario de datos.</p>
+<p>La app está construida con software libre y de código abierto (React Native, Expo y otras librerías). Son bibliotecas que se compilan dentro de la aplicación: no son servicios, no reciben información y no hay ninguna comunicación con sus autores.</p>
 <p>Sí conviene ser honesto con dos cosas que no dependen de la app:</p>
 <ul>
 <li><strong>Las tiendas.</strong> Apple y Google recogen sus propios datos cuando descargas o actualizas cualquier aplicación, incluida esta: eso ocurre en su plataforma, bajo sus políticas de privacidad, y ni lo controlamos ni recibimos nada de ello. Las estadísticas agregadas y anónimas que las consolas de desarrollador muestran (número de instalaciones, países, versiones de sistema operativo) las genera la tienda, no la app, y no permiten identificar a nadie.</li>
 <li><strong>La copia de seguridad de tu propio teléfono.</strong> Si tienes activada la copia de seguridad del sistema (iCloud en iOS, Copia de seguridad de Google en Android), es posible que el almacenamiento local de Backstage se incluya en ella, como el de cualquier otra app. Esa copia es tuya, está en tu cuenta y se rige por la política de privacidad de Apple o de Google. Nosotros no tenemos acceso a ella. Puedes excluir la app de la copia de seguridad desde los ajustes de tu sistema operativo.</li>
 </ul>
 <h2>6. Menores de edad</h2>
-<p>Backstage no está dirigida a menores de 13 años. El contenido trata sobre contratos,</p>
-<p>cesión de derechos y liquidaciones de dinero, un tema que presupone un público adulto o</p>
-<p>adolescente con interés profesional.</p>
-<p>Dicho esto, la app no recoge datos de nadie, de ninguna edad. No hay información</p>
-<p>personal de menores que podamos haber obtenido, porque no hay información personal de</p>
-<p>nadie. No aplican, por tanto, los mecanismos de consentimiento parental de COPPA ni las</p>
-<p>disposiciones sobre datos de menores del RGPD: no hay datos que consentir.</p>
+<p>Backstage no está dirigida a menores de 13 años. El contenido trata sobre contratos, cesión de derechos y liquidaciones de dinero, un tema que presupone un público adulto o adolescente con interés profesional.</p>
+<p>Dicho esto, la app no recoge datos de nadie, de ninguna edad. No hay información personal de menores que podamos haber obtenido, porque no hay información personal de nadie. No aplican, por tanto, los mecanismos de consentimiento parental de COPPA ni las disposiciones sobre datos de menores del RGPD: no hay datos que consentir.</p>
 <h2>7. Tus derechos</h2>
-<p>La normativa de protección de datos —la <strong>Ley 1581 de 2012 (Habeas Data) en Colombia</strong>,</p>
-<p>que es donde reside el responsable, el Reglamento General de Protección de Datos (RGPD)</p>
-<p>en la Unión Europea, la CCPA/CPRA en California, la LGPD en Brasil, la LFPDPPP en</p>
-<p>México, la Ley 25.326 en Argentina y equivalentes en otros países— te reconoce una serie</p>
-<p>de derechos sobre tus datos personales. Los enumeramos y decimos con franqueza cómo se</p>
-<p>ejercen aquí:</p>
-<p>| Derecho | Cómo se ejerce en Backstage |</p>
-<p>| --- | --- |</p>
-<p>| <strong>Acceso</strong> — saber qué datos hay sobre ti | Los tienes delante: son los que se muestran en la pantalla de Perfil de la app. No existe ninguna copia adicional en ningún otro sitio. |</p>
-<p>| <strong>Rectificación</strong> — corregir datos inexactos | Se edita desde la app: el nombre artístico y la meta diaria se cambian en Perfil. |</p>
-<p>| <strong>Supresión</strong> (derecho al olvido) | Perfil → <strong>"Borrar todo mi progreso"</strong> borra todo de inmediato. Desinstalar la app también lo elimina por completo. No hay nada que pedirnos borrar porque no tenemos nada. |</p>
-<p>| <strong>Portabilidad</strong> | Actualmente la app no exporta el progreso a un archivo. Es una limitación real y la reconocemos; los datos no salen de tu dispositivo, así que tampoco hay una copia nuestra que trasladar a otro servicio. |</p>
-<p>| <strong>Oposición y limitación del tratamiento</strong> | No hay tratamiento al que oponerse: no analizamos, no perfilamos y no compartimos. |</p>
-<p>| <strong>Retirar el consentimiento</strong> | No se te pide consentimiento para tratar datos porque no se tratan datos. |</p>
-<p>| <strong>No ser objeto de decisiones automatizadas</strong> | No hay ninguna. Las mecánicas del juego (vidas, XP, coronas) son reglas fijas descritas en la propia app, no perfilado. |</p>
-<p>| <strong>No discriminación por ejercer tus derechos</strong> (CCPA) | La app es gratuita y completa para todo el mundo; borrar el progreso no limita ninguna función. |</p>
-<p>| <strong>Venta o "compartición" de datos personales</strong> (CCPA/CPRA) | No se venden ni se comparten datos personales, y no se han vendido ni compartido nunca. No hay señal "Do Not Sell" que activar porque no hay venta. |</p>
-<p>| <strong>Reclamación ante una autoridad de control</strong> | Puedes reclamar ante la autoridad de protección de datos de tu país. En Colombia, la Superintendencia de Industria y Comercio (SIC), Delegatura para la Protección de Datos Personales, que es la autoridad del país donde reside el responsable; en España, la AEPD; en México, el organismo garante correspondiente; en la UE, la autoridad de tu Estado miembro. |</p>
-<p>Para cualquier duda o para ejercer estos derechos, escribe a</p>
-<p><strong><code>pdevelop@pm.me</code></strong>. Responderemos en un plazo razonable y, en todo caso, dentro</p>
-<p>de los plazos que fije la normativa aplicable (30 días en el RGPD, prorrogables). Ten en</p>
-<p>cuenta que, si nos escribes, tu correo electrónico y el contenido de tu mensaje llegarán</p>
-<p>a nuestro buzón: eso sí es un dato personal, y lo usaremos únicamente para responderte.</p>
+<p>La normativa de protección de datos —la <strong>Ley 1581 de 2012 (Habeas Data) en Colombia</strong>, que es donde reside el responsable, el Reglamento General de Protección de Datos (RGPD) en la Unión Europea, la CCPA/CPRA en California, la LGPD en Brasil, la LFPDPPP en México, la Ley 25.326 en Argentina y equivalentes en otros países— te reconoce una serie de derechos sobre tus datos personales. Los enumeramos y decimos con franqueza cómo se ejercen aquí:</p>
+<div class="table-wrap"><table>
+<thead><tr><th>Derecho</th><th>Cómo se ejerce en Backstage</th></tr></thead>
+<tbody><tr><td><strong>Acceso</strong> — saber qué datos hay sobre ti</td><td>Los tienes delante: son los que se muestran en la pantalla de Perfil de la app. No existe ninguna copia adicional en ningún otro sitio.</td></tr>
+<tr><td><strong>Rectificación</strong> — corregir datos inexactos</td><td>Se edita desde la app: el nombre artístico y la meta diaria se cambian en Perfil.</td></tr>
+<tr><td><strong>Supresión</strong> (derecho al olvido)</td><td>Perfil → <strong>"Borrar todo mi progreso"</strong> borra todo de inmediato. Desinstalar la app también lo elimina por completo. No hay nada que pedirnos borrar porque no tenemos nada.</td></tr>
+<tr><td><strong>Portabilidad</strong></td><td>Actualmente la app no exporta el progreso a un archivo. Es una limitación real y la reconocemos; los datos no salen de tu dispositivo, así que tampoco hay una copia nuestra que trasladar a otro servicio.</td></tr>
+<tr><td><strong>Oposición y limitación del tratamiento</strong></td><td>No hay tratamiento al que oponerse: no analizamos, no perfilamos y no compartimos.</td></tr>
+<tr><td><strong>Retirar el consentimiento</strong></td><td>No se te pide consentimiento para tratar datos porque no se tratan datos.</td></tr>
+<tr><td><strong>No ser objeto de decisiones automatizadas</strong></td><td>No hay ninguna. Las mecánicas del juego (vidas, XP, coronas) son reglas fijas descritas en la propia app, no perfilado.</td></tr>
+<tr><td><strong>No discriminación por ejercer tus derechos</strong> (CCPA)</td><td>La app es gratuita y completa para todo el mundo; borrar el progreso no limita ninguna función.</td></tr>
+<tr><td><strong>Venta o "compartición" de datos personales</strong> (CCPA/CPRA)</td><td>No se venden ni se comparten datos personales, y no se han vendido ni compartido nunca. No hay señal "Do Not Sell" que activar porque no hay venta.</td></tr>
+<tr><td><strong>Reclamación ante una autoridad de control</strong></td><td>Puedes reclamar ante la autoridad de protección de datos de tu país. En Colombia, la Superintendencia de Industria y Comercio (SIC), Delegatura para la Protección de Datos Personales, que es la autoridad del país donde reside el responsable; en España, la AEPD; en México, el organismo garante correspondiente; en la UE, la autoridad de tu Estado miembro.</td></tr></tbody>
+</table></div>
+<p>Para cualquier duda o para ejercer estos derechos, escribe a <strong><code>pdevelop@pm.me</code></strong>. Responderemos en un plazo razonable y, en todo caso, dentro de los plazos que fije la normativa aplicable (30 días en el RGPD, prorrogables). Ten en cuenta que, si nos escribes, tu correo electrónico y el contenido de tu mensaje llegarán a nuestro buzón: eso sí es un dato personal, y lo usaremos únicamente para responderte.</p>
 <h2>8. Conservación y eliminación de datos</h2>
-<p>Tus datos de progreso permanecen en tu dispositivo mientras la app esté instalada y no</p>
-<p>los borres. No hay plazo de conservación por nuestra parte porque no conservamos nada.</p>
+<p>Tus datos de progreso permanecen en tu dispositivo mientras la app esté instalada y no los borres. No hay plazo de conservación por nuestra parte porque no conservamos nada.</p>
 <p>Se eliminan definitivamente en cualquiera de estos tres casos:</p>
 <ol>
 <li>Pulsas <strong>Perfil → "Borrar todo mi progreso"</strong> y confirmas.</li>
 <li><strong>Desinstalas la aplicación.</strong> El sistema operativo elimina el almacenamiento local de la app junto con ella.</li>
 <li>Borras los datos de la app desde los ajustes del sistema (en Android, Ajustes → Aplicaciones → Backstage → Almacenamiento → Borrar datos).</li>
 </ol>
-<p>No hay copia de seguridad en la nube por nuestra parte, así que **la eliminación es</p>
-<p>irreversible**. Es la contrapartida directa de no pedirte una cuenta: si cambias de</p>
-<p>teléfono, tu progreso no viaja contigo.</p>
+<p>No hay copia de seguridad en la nube por nuestra parte, así que <strong>la eliminación es irreversible</strong>. Es la contrapartida directa de no pedirte una cuenta: si cambias de teléfono, tu progreso no viaja contigo.</p>
 <h2>9. Seguridad</h2>
-<p>Los datos se guardan en el almacenamiento privado que el sistema operativo asigna a cada</p>
-<p>aplicación, aislado del resto de apps por el propio sistema (sandbox). No se transmiten,</p>
-<p>por lo que no existe riesgo de interceptación en tránsito.</p>
-<p>No se cifran de forma adicional dentro de la app, y decimos por qué: no contienen</p>
-<p>información sensible —son puntos, coronas y un nombre artístico que tú eliges— y el</p>
-<p>cifrado del dispositivo, activo por defecto en iOS y en las versiones actuales de</p>
-<p>Android, ya los protege si el teléfono se pierde. Añadir una capa de cifrado propia</p>
-<p>daría una sensación de seguridad sin mejorarla de verdad.</p>
-<p>Como no hay servidores ni cuentas, tampoco existe la posibilidad de una filtración de</p>
-<p>datos de usuarios de Backstage: no hay una base de datos que filtrar.</p>
+<p>Los datos se guardan en el almacenamiento privado que el sistema operativo asigna a cada aplicación, aislado del resto de apps por el propio sistema (sandbox). No se transmiten, por lo que no existe riesgo de interceptación en tránsito.</p>
+<p>No se cifran de forma adicional dentro de la app, y decimos por qué: no contienen información sensible —son puntos, coronas y un nombre artístico que tú eliges— y el cifrado del dispositivo, activo por defecto en iOS y en las versiones actuales de Android, ya los protege si el teléfono se pierde. Añadir una capa de cifrado propia daría una sensación de seguridad sin mejorarla de verdad.</p>
+<p>Como no hay servidores ni cuentas, tampoco existe la posibilidad de una filtración de datos de usuarios de Backstage: no hay una base de datos que filtrar.</p>
 <h2>10. Contenido educativo: lo que esta app no es</h2>
-<p>Esto no es estrictamente una cuestión de privacidad, pero pertenece al mismo trato de</p>
-<p>franqueza y se repite dentro de la app, en la pantalla de avisos legales:</p>
-<p>Backstage es material educativo. <strong>No constituye asesoría legal, fiscal ni financiera.</strong></p>
-<p>Las cifras de mercado que aparecen en las lecciones se presentan como rangos habituales</p>
-<p>y varían según el territorio, la plataforma y el momento. Un contrato lo revisa un</p>
-<p>abogado especializado antes de firmarlo. La app no promete ni garantiza ningún resultado</p>
-<p>económico.</p>
-<p>Los nombres de sociedades de gestión, editoras, sellos, distribuidoras y plataformas</p>
-<p>digitales que se mencionan en el contenido aparecen solo con fines informativos y</p>
-<p>educativos. Son marcas de sus respectivos titulares y esta aplicación no tiene ninguna</p>
-<p>afiliación, patrocinio, respaldo ni relación comercial con ellas.</p>
+<p>Esto no es estrictamente una cuestión de privacidad, pero pertenece al mismo trato de franqueza y se repite dentro de la app, en la pantalla de avisos legales:</p>
+<p>Backstage es material educativo. <strong>No constituye asesoría legal, fiscal ni financiera.</strong> Las cifras de mercado que aparecen en las lecciones se presentan como rangos habituales y varían según el territorio, la plataforma y el momento. Un contrato lo revisa un abogado especializado antes de firmarlo. La app no promete ni garantiza ningún resultado económico.</p>
+<p>Los nombres de sociedades de gestión, editoras, sellos, distribuidoras y plataformas digitales que se mencionan en el contenido aparecen solo con fines informativos y educativos. Son marcas de sus respectivos titulares y esta aplicación no tiene ninguna afiliación, patrocinio, respaldo ni relación comercial con ellas.</p>
 <h2>11. Cambios en esta política</h2>
-<p>Si la app cambia de forma que afecte a la privacidad —por ejemplo, si en el futuro se</p>
-<p>añadiera sincronización en la nube, cuentas o cualquier forma de analítica— esta</p>
-<p>política se actualizará <strong>antes</strong> de que ese cambio llegue a la tienda, y se cambiará</p>
-<p>también la ficha de privacidad de la App Store y el formulario de Seguridad de los datos</p>
-<p>de Google Play.</p>
-<p>La fecha de "Última actualización" del encabezado indica la versión vigente. Los cambios</p>
-<p>sustanciales se anunciarán además en las notas de la versión correspondiente.</p>
+<p>Si la app cambia de forma que afecte a la privacidad —por ejemplo, si en el futuro se añadiera sincronización en la nube, cuentas o cualquier forma de analítica— esta política se actualizará <strong>antes</strong> de que ese cambio llegue a la tienda, y se cambiará también la ficha de privacidad de la App Store y el formulario de Seguridad de los datos de Google Play.</p>
+<p>La fecha de "Última actualización" del encabezado indica la versión vigente. Los cambios sustanciales se anunciarán además en las notas de la versión correspondiente.</p>
 <h2>12. Contacto</h2>
-<p><code>Juan Pablo Pérez Vélez</code></p>
-<p><code>Colombia</code></p>
-<p><strong><code>pdevelop@pm.me</code></strong></p>
-<p>Si crees que esta política no describe con exactitud lo que la app hace, escríbenos: es</p>
-<p>un error que queremos corregir, no una discusión.</p>
+<p><code>Juan Pablo Pérez Vélez</code> <code>Colombia</code> <strong><code>pdevelop@pm.me</code></strong></p>
+<p>Si crees que esta política no describe con exactitud lo que la app hace, escríbenos: es un error que queremos corregir, no una discusión.</p>
 <hr>
-<p>*Documento redactado para la versión 1.0.0 de Backstage. No es un texto legal</p>
-<p>redactado por un abogado; describe con precisión el comportamiento técnico de la</p>
-<p>aplicación. Si tu jurisdicción exige cláusulas concretas que aquí no aparecen, conviene</p>
-<p>que lo revise un profesional.*</p>
+<p>*Documento redactado para la versión 1.0.0 de Backstage. No es un texto legal redactado por un abogado; describe con precisión el comportamiento técnico de la aplicación. Si tu jurisdicción exige cláusulas concretas que aquí no aparecen, conviene que lo revise un profesional.*</p>
 </main>
 <footer>
   Backstage · <code>com.backstage.app</code> · Juan Pablo Pérez Vélez
