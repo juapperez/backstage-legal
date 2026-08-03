@@ -22,6 +22,8 @@
   h2 { font-size: 21px; margin: 44px 0 10px; letter-spacing: -0.01em; }
   h3 { font-size: 18px; margin: 30px 0 8px; color: var(--dim); }
   p { margin: 0 0 16px; }
+  p.field { margin: 0 0 6px; }
+  p.field + :not(.field) { margin-top: 16px; }
   ul, ol { margin: 0 0 16px; padding-left: 22px; }
   li { margin-bottom: 8px; }
   a { color: var(--lime); text-decoration: underline; text-underline-offset: 2px; }
@@ -51,7 +53,10 @@
 <main>
 <h1>Política de privacidad de Backstage</h1>
 <p><strong>Última actualización: 3 de agosto de 2026</strong></p>
-<p><strong>Aplicación:</strong> Backstage <strong>Identificador:</strong> <code>com.backstage.app</code> <strong>Responsable:</strong> <code>Juan Pablo Pérez Vélez</code> <strong>Contacto:</strong> <code>pdevelop@pm.me</code></p>
+<p class="field"><strong>Aplicación:</strong> Backstage</p>
+<p class="field"><strong>Identificador:</strong> <code>com.backstage.app</code></p>
+<p class="field"><strong>Responsable:</strong> <code>Juan Pablo Pérez Vélez</code></p>
+<p class="field"><strong>Contacto:</strong> <code>pdevelop@pm.me</code></p>
 <hr>
 <h2>1. Resumen en una frase</h2>
 <p>Backstage no recoge, no almacena en servidores, no transmite y no comparte ningún dato personal. No hay cuentas, no hay servidores, no hay analítica y no hay anuncios. Todo lo que la app guarda son tus datos de progreso, y viven únicamente en tu dispositivo.</p>
