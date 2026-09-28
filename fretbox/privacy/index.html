@@ -95,8 +95,8 @@
 <h2>4. Microphone</h2>
 <p>Where the tuner is available, the microphone is used only while the tuner is switched on, to detect the pitch of the string you play. The sound is analysed live on the device; nothing is recorded, saved or sent. The current Android version does not request microphone access.</p>
 
-<h2>5. Background playback</h2>
-<p>To keep a score playing when you switch apps, Android requires a media-playback notification (a "foreground service"). It only controls playback and carries no data.</p>
+<h2>5. Background services and permissions</h2>
+<p>Fretbox does not run any service in the background and shows no playback notification. The current Android version lists the media-playback foreground-service permission because the audio library it uses for the tuner adds it by default; the app never starts that service. It will be removed in the next version. The app requests no permissions from you.</p>
 
 <h2>6. Children</h2>
 <p>Fretbox is not directed at children under 13 and collects no data from anyone, of any age.</p>
@@ -134,8 +134,8 @@
 <h2>4. Micrófono</h2>
 <p>Donde el afinador está disponible, el micrófono se usa solo mientras el afinador está encendido, para detectar la nota de la cuerda que tocas. El sonido se analiza en directo en el dispositivo; no se graba, no se guarda y no se envía. La versión actual de Android no pide acceso al micrófono.</p>
 
-<h2>5. Reproducción en segundo plano</h2>
-<p>Para que una partitura siga sonando al cambiar de app, Android exige una notificación de reproducción multimedia (un «servicio en primer plano»). Solo controla la reproducción y no lleva ningún dato.</p>
+<h2>5. Servicios en segundo plano y permisos</h2>
+<p>Fretbox no ejecuta ningún servicio en segundo plano ni muestra notificación de reproducción. La versión actual de Android incluye en su lista el permiso de servicio en primer plano de reproducción multimedia porque la librería de audio que usa el afinador lo añade por defecto; la app nunca inicia ese servicio. Se quitará en la próxima versión. La app no te pide ningún permiso.</p>
 
 <h2>6. Menores</h2>
 <p>Fretbox no está dirigida a menores de 13 años y no recoge datos de nadie, de ninguna edad.</p>

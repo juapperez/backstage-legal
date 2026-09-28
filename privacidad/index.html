@@ -70,7 +70,7 @@
 <body>
 <main>
 <h1>Política de privacidad de Backstage</h1>
-<p><strong>Última actualización: 3 de agosto de 2026</strong></p>
+<p><strong>Última actualización: 28 de septiembre de 2026</strong></p>
 <p class="field"><strong>Aplicación:</strong> Backstage</p>
 <p class="field"><strong>Identificador:</strong> <code>com.pdevelop.backstage</code></p>
 <p class="field"><strong>Responsable:</strong> <code>Juan Pablo Pérez Vélez</code></p>
@@ -110,8 +110,9 @@
 <li>Por cada lección: cuántas coronas tiene, tu mejor porcentaje de acierto y cuándo la completaste.</li>
 <li>La lista de ejercicios que has fallado y siguen pendientes de repaso.</li>
 <li>Los logros que has desbloqueado.</li>
+<li>Tus ajustes: el idioma de la app y, si lo enciendes, el recordatorio diario y su hora.</li>
 </ul>
-<p>Estos datos se guardan mediante el almacenamiento local de la aplicación (<code>AsyncStorage</code>), bajo la clave <code>backstage-progress-v1</code>, dentro del espacio privado que el sistema operativo reserva a cada app.</p>
+<p>Estos datos se guardan mediante el almacenamiento local de la aplicación (<code>AsyncStorage</code>), bajo la clave <code>backstage-progress-v1</code>, dentro del espacio privado que el sistema operativo reserva a cada app. Aparte, bajo la clave <code>backstage-review-v1</code>, la app anota si ya te mostró la petición de valoración (ver apartado 4), para no repetirla; no guarda qué respondiste porque la tienda no se lo dice.</p>
 <p><strong>Nunca salen de tu dispositivo.</strong> No se sincronizan, no se respaldan en un servidor nuestro, no se asocian a ninguna identidad y nadie más que tú puede verlos, empezando por quien ha hecho la app.</p>
 <p>Legalmente, esto significa que quien trata esos datos eres tú, en tu propio dispositivo. No hay un responsable del tratamiento al otro lado porque no hay otro lado.</p>
 <h2>4. La app funciona sin conexión y no hace peticiones de red por su cuenta</h2>
@@ -122,6 +123,11 @@
 <li>Los dos enlaces de la sección <strong>Herramientas recomendadas</strong> del Perfil (<code>ytrocket.com</code> y <code>naeku.io</code>).</li>
 </ul>
 <p>En los tres casos ocurre lo mismo: se abre el navegador de tu teléfono y <strong>la petición la hace el navegador, no la app</strong>. A partir de ahí, el sitio de destino verá lo que ve cualquier servidor web: tu dirección IP y los datos de tu navegador. Backstage no envía nada con esos enlaces —no llevan identificadores, ni parámetros de seguimiento, ni códigos de afiliado— y no recibe ninguna señal de vuelta: no sabemos si los pulsaste. Si no los pulsas, no ocurre absolutamente nada.</p>
+<p>Hay otras dos cosas que conviene contar, porque salen de la app aunque no lleguen a nosotros:</p>
+<ul>
+<li><strong>La petición de valoración.</strong> Después de completar varias lecciones, la app puede pedir al sistema que muestre el cuadro de valoración de la tienda (In-App Review de Google Play en Android, el de la App Store en iOS). Ese cuadro lo pinta y lo gestiona la tienda, bajo su política de privacidad; la tienda decide si aparece y no le dice a la app si valoraste ni qué pusiste. Backstage no envía nada.</li>
+<li><strong>El certificado.</strong> Al terminar el curso puedes generar un certificado en PDF con tu nombre artístico, tus coronas y la fecha. Se crea en el teléfono, sin conexión. Solo sale de la app si tú lo compartes desde la hoja de compartir del sistema, y va a donde tú elijas.</li>
+</ul>
 <h2>5. Terceros</h2>
 <p>No hay.</p>
 <p>No hay proveedores de servicios, ni encargados del tratamiento, ni SDK de terceros que recojan datos, ni socios publicitarios, ni transferencias internacionales de datos. Ninguna de esas secciones habituales aplica a esta app porque no hay ningún destinatario de datos.</p>
@@ -177,7 +183,7 @@
 <p><code>Juan Pablo Pérez Vélez</code> <code>Colombia</code> <strong><code>pdevelop@pm.me</code></strong></p>
 <p>Si crees que esta política no describe con exactitud lo que la app hace, escríbenos: es un error que queremos corregir, no una discusión.</p>
 <hr>
-<p><em>Documento redactado para la versión 1.0.1 de Backstage. No es un texto legal redactado por un abogado; describe con precisión el comportamiento técnico de la aplicación. Si tu jurisdicción exige cláusulas concretas que aquí no aparecen, conviene que lo revise un profesional.</em></p>
+<p><em>Documento redactado para la versión 1.0.3 de Backstage. No es un texto legal redactado por un abogado; describe con precisión el comportamiento técnico de la aplicación. Si tu jurisdicción exige cláusulas concretas que aquí no aparecen, conviene que lo revise un profesional.</em></p>
 </main>
 <footer>
   Backstage · <code>com.pdevelop.backstage</code> · Juan Pablo Pérez Vélez
